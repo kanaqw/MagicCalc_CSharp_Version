@@ -24,7 +24,9 @@ namespace ConsoleApp1
                 case "sub":
                     Console.WriteLine($"The result is {f - s}");
                     break;
-
+                case "pow":
+                    Console.WriteLine($"The result is {Math.Pow(f, s)}");
+                    break;
             }
             Console.ReadLine();
         }
@@ -35,8 +37,12 @@ namespace ConsoleApp1
 
      static void Main(string []args)
         {
-            Console.WriteLine("Choose the operation: \n(hint: sum,sub,div or mul)");
+            Console.WriteLine("Choose the operation: \n(hint: sum,sub,div,mul or pow)");
             string op = Console.ReadLine();
+            if (op =="pow")
+            {
+                Console.WriteLine("X^y, where X - first var, y - second\n");
+            }
             Console.WriteLine("First variable: ");
             var first = Convert.ToInt32(Console.ReadLine());
             Console.WriteLine("Second variable: ");
